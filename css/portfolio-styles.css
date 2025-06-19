@@ -1,0 +1,337 @@
+/* Portfolio Section Styles */
+:root {
+    --amesoft-red: #c20b19;
+    --amesoft-red-light: #e73c47;
+    --amesoft-dark: #2c3e50;
+    --gradient-primary: linear-gradient(135deg, #c20b19 0%, #e73c47 100%);
+    --shadow-elegant: 0 15px 35px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 40px rgba(194, 11, 25, 0.2);
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--amesoft-dark);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 3rem;
+}
+
+/* Portfolio Styles */
+.portfolio-item {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-elegant);
+    transition: all 0.3s ease;
+    height: 100%;
+    background: white;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.portfolio-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.portfolio-link img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.portfolio-link:hover .portfolio-hover {
+    opacity: 0.95;
+}
+
+.portfolio-hover-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.portfolio-caption-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-caption-subheading {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.portfolio-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.portfolio-caption {
+    background: white;
+    padding: 1.5rem;
+    text-align: left;
+    border-top: 3px solid var(--amesoft-red);
+}
+
+.portfolio-caption .portfolio-caption-heading {
+    color: var(--amesoft-dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-caption .portfolio-caption-subheading {
+    color: var(--amesoft-red);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.project-description {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-team {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.project-team strong {
+    color: var(--amesoft-dark);
+}
+
+.project-type {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--amesoft-red);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(194, 11, 25, 0.3);
+}
+
+.tech-icons {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.tech-icon {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amesoft-red);
+    font-size: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tech-stack-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-chip {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: var(--amesoft-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.btn-see-more {
+    background: var(--amesoft-red);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-see-more:hover {
+    background: var(--amesoft-red-light);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.portfolio-nav {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.portfolio-filter {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 2px solid var(--amesoft-red);
+    color: var(--amesoft-red);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-filter:hover,
+.portfolio-filter.active {
+    background: var(--amesoft-red);
+    color: white;
+    text-decoration: none;
+}
+
+/* Portfolio CTA */
+.portfolio-cta {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.btn-portfolio-cta {
+    background: white;
+    color: var(--amesoft-red);
+    border: 2px solid white;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-portfolio-cta:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+    text-decoration: none;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.project-detail-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.detail-tech-stack {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-item {
+    background: var(--amesoft-red);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}

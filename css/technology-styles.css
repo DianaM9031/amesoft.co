@@ -1,0 +1,122 @@
+/* =============================================================
+   CSS PARA SECCIÓN DE TECNOLOGÍAS
+   Puedes crear este archivo separado o mantener el CSS en tu archivo principal
+   ============================================================= */
+
+/* Categorías de tecnologías */
+.tech-category {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--amesoft-red);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+/* Cards de tecnologías mejorados */
+.tech-item {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.tech-item:hover {
+    border-color: var(--amesoft-red);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(194, 11, 25, 0.2);
+}
+
+/* Iconos más grandes */
+.tech-icon-large {
+    font-size: 4.5rem !important;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.tech-item:hover .tech-icon-large {
+    transform: scale(1.1);
+}
+
+/* Textos más grandes */
+.tech-item h6 {
+    font-size: 1.4rem !important;
+    font-weight: 700;
+    color: var(--amesoft-dark);
+    margin-bottom: 0.5rem;
+}
+
+.tech-item p {
+    color: var(--amesoft-gray);
+    font-size: 1rem !important;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tech-icon-large {
+        font-size: 3.5rem !important;
+    }
+    
+    .tech-item {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tech-item h6 {
+        font-size: 1.2rem !important;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+    }
+    
+    .tech-category {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-icon-large {
+        font-size: 3rem !important;
+    }
+    
+    .tech-item {
+        padding: 1.5rem 1rem;
+    }
+}
