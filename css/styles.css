@@ -10110,80 +10110,215 @@ img::-moz-selection {
   border-color: #6E1600;
 }
 
+/********* MAIN NAVBAR *********/
+
+/* ========================================
+   NAVBAR FIXES - Solo para el navbar, sin afectar otras secciones
+   ======================================== */
+
+/* SOBRESCRIBIR SOLO ESTILOS DEL NAVBAR */
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #9c9d9f;
-}
-#mainNav .navbar-toggler {
-  padding: 0.75rem;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 0.75rem;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #c20b19;
-  border: 0;
-}
-#mainNav .navbar-brand {
-  color: #c20b19;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
-}
-#mainNav .navbar-brand img {
-  height: 2.5rem;
-}
-#mainNav .navbar-nav .nav-item .nav-link {
-  background-color: rgba(255, 255, 255, 0.4);
-  font-family: "Titillium Web", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #fff;
-  letter-spacing: 0.0625em;
-}
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #c20b19;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
+/* ARREGLAR BOTÓN HAMBURGUESA - QUITAR FONDO ROJO */
+#mainNav .navbar-toggler {
+  padding: 0.5rem 0.75rem !important;
+  font-family: "Titillium Web", sans-serif !important;
+  font-size: 1rem !important;
+  color: #c20b19 !important;
+  text-transform: uppercase !important;
+  background-color: transparent !important; /* QUITAR FONDO ROJO */
+  border: 2px solid #c20b19 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+#mainNav .navbar-toggler:hover {
+  background-color: #c20b19 !important;
+  color: white !important;
+}
+
+#mainNav .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(194, 11, 25, 0.25) !important;
+}
+
+/* ARREGLAR ICONO DEL TOGGLER */
+#mainNav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23c20b19' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+#mainNav .navbar-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* LOGO */
+#mainNav .navbar-brand {
+  color: #c20b19 !important;
+  font-family: "Titillium Web", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.0625em !important;
+  text-transform: uppercase !important;
+}
+
+#mainNav .navbar-brand img {
+  height: 2.5rem !important;
+  transition: height 0.3s ease !important;
+}
+
+/* ENLACES DEL MENÚ - SOLO DENTRO DEL NAVBAR */
+#mainNav .navbar-nav .nav-item .nav-link {
+  background-color: transparent !important; /* QUITAR FONDO GRIS */
+  font-family: "Titillium Web", sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  letter-spacing: 0.0625em !important;
+  padding: 0.75rem 1rem !important;
+  margin: 0 0.25rem !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(45deg, #c20b19, #ff4757) !important;
+  transition: all 0.3s ease !important;
+  transform: translateX(-50%) !important;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #c20b19 !important;
+  background-color: rgba(194, 11, 25, 0.05) !important;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover::after {
+  width: 80% !important;
+}
+
+/* ESTADO ACTIVO - SOLO EN EL NAVBAR */
+#mainNav .navbar-nav .nav-item .nav-link.active {
+  color: #c20b19 !important;
+  font-weight: 700 !important;
+  background-color: rgba(194, 11, 25, 0.1) !important;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active::after {
+  width: 80% !important;
+}
+
+/* ESTILOS RESPONSIVOS MEJORADOS - SOLO NAVBAR */
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    border: none;
-    background-color: transparent;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    border: none !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
   }
+  
   #mainNav .navbar-brand {
-    font-size: 1.5em;
-    transition: font-size 0.3s ease-in-out;
+    font-size: 1.5em !important;
+    transition: font-size 0.3s ease-in-out !important;
   }
+  
   #mainNav .navbar-brand img {
-    height: 4rem;
-    transition: height 0.3s ease-in-out;
+    height: 4rem !important;
+    transition: height 0.3s ease-in-out !important;
   }
+  
+  /* CUANDO HACE SHRINK */
   #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: #9c9d9f;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
   }
+  
+  /* ARREGLAR ENLACES CUANDO HACE SHRINK - QUITAR FONDO GRIS */
   #mainNav.navbar-shrink .nav-item .nav-link {
-    background-color: #9c9d9f;
+    background-color: transparent !important; /* QUITAR FONDO GRIS */
+    color: #333 !important;
   }
+  
+  #mainNav.navbar-shrink .nav-item .nav-link:hover {
+    background-color: rgba(194, 11, 25, 0.05) !important;
+    color: #c20b19 !important;
+  }
+  
+  #mainNav.navbar-shrink .nav-item .nav-link.active {
+    color: #c20b19 !important;
+    background-color: rgba(194, 11, 25, 0.1) !important;
+  }
+  
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.25em;
+    font-size: 1.25em !important;
   }
+  
   #mainNav.navbar-shrink .navbar-brand svg,
-#mainNav.navbar-shrink .navbar-brand img {
-    height: 2.5rem;
+  #mainNav.navbar-shrink .navbar-brand img {
+    height: 2.5rem !important;
   }
+  
   #mainNav .navbar-nav .nav-item {
-    margin-right: 1rem;
+    margin-right: 0.5rem !important;
   }
+  
   #mainNav .navbar-nav .nav-item:last-child {
-    margin-right: 0;
+    margin-right: 0 !important;
   }
 }
+
+/* ESTILOS PARA MOBILE - SOLO NAVBAR */
+@media (max-width: 991.98px) {
+  #mainNav {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+  }
+  
+  #mainNav .navbar-collapse {
+    background-color: white !important;
+    border-radius: 15px !important;
+    margin-top: 1rem !important;
+    padding: 1rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  #mainNav .navbar-nav .nav-item .nav-link {
+    text-align: center !important;
+    margin: 0.25rem 0 !important;
+    border-radius: 10px !important;
+  }
+}
+  /********* MAIN NAVBAR *********/
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;

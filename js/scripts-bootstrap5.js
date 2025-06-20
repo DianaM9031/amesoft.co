@@ -1,4 +1,4 @@
-// Scripts.js compatibles con Bootstrap 5
+// js/scripts-bootstrap5.js - VERSIÓN COMPLETAMENTE ARREGLADA
 (function() {
     "use strict";
 
@@ -21,55 +21,110 @@
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
-    // BOOTSTRAP 5 VERSION
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
+    // ============================================
+    // SCROLLSPY ARREGLADO COMPLETAMENTE
+    // ============================================
+    
+    // Función para manejar la navegación activa manualmente
+    function updateActiveNavLink() {
+        const sections = ['home', 'about', 'services', 'technology', 'portfolio', 'team', 'contact'];
+        const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+        const scrollPosition = window.scrollY + 100; // Offset para mejor detección
+        
+        let currentSection = 'home'; // Por defecto
+        
+        // Buscar qué sección está visible
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const section = document.getElementById(sections[i]);
+            if (section && section.offsetTop <= scrollPosition) {
+                currentSection = sections[i];
+                break;
+            }
+        }
+        
+        // Remover clase active de todos los enlaces
+        navLinks.forEach(link => {
+            link.classList.remove('active');
         });
+        
+        // Agregar clase active al enlace correcto
+        const activeLink = document.querySelector(`#navbarNav .nav-link[href="#${currentSection}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
     }
+    
+    // Usar scroll event para actualizar navegación activa
+    document.addEventListener('scroll', updateActiveNavLink);
+    
+    // Ejecutar al cargar la página
+    updateActiveNavLink();
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
+    // ============================================
+    // CERRAR MENU MOBILE AL HACER CLICK
+    // ============================================
+    
+    // Obtener el botón toggler y el collapse
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#navbarNav');
+    
+    // Obtener todos los enlaces del menú
+    const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+    
+    // Función para cerrar el menú
+    function closeNavbar() {
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            });
+            bsCollapse.hide();
+        }
+    }
+    
+    // Agregar event listener a cada enlace del menú
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener('click', function(e) {
+            const targetHref = this.getAttribute('href');
+            
+            // Solo procesar enlaces internos
+            if (targetHref && targetHref.startsWith('#')) {
                 e.preventDefault();
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                
+                // Cerrar menú en móvil
+                if (navbarToggler && getComputedStyle(navbarToggler).display !== 'none') {
+                    closeNavbar();
+                }
+                
+                // Smooth scroll
+                const targetElement = document.querySelector(targetHref);
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('#mainNav').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Actualizar navegación activa después del scroll
+                    setTimeout(() => {
+                        updateActiveNavLink();
+                    }, 100);
+                }
             }
         });
     });
 
-    // Contact form handling (si tienes formulario)
+    // Contact form handling (si tienes formulario de contacto)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Aquí puedes agregar tu lógica de envío de formulario
             console.log('Formulario enviado');
             
-            // Ejemplo de validación básica
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            const name = document.getElementById('name')?.value;
+            const email = document.getElementById('email')?.value;
+            const message = document.getElementById('message')?.value;
             
             if (name && email && message) {
                 alert('¡Mensaje enviado correctamente!');
