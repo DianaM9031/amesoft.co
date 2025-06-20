@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amesoft - Make it Real | Brochure Comercial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --amesoft-red: #c20b19;
+            --amesoft-red-light: #e63946;
+            --amesoft-dark: #2c3e50;
+            --amesoft-gray: #6c757d;
+            --gradient-primary: linear-gradient(135deg, #c20b19 0%, #e63946 100%);
+            --shadow-elegant: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--amesoft-dark);
+            background: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .brochure-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: var(--shadow-elegant);
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: url("/assets/img/bck.png");
+            background-repeat: repeat;
+            background-attachment: scroll;
+            background-position: center center;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 3rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--amesoft-red);
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--amesoft-gray);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--amesoft-red);
+            box-shadow: 0 20px 40px rgba(194, 11, 25, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--amesoft-red);
+            margin-bottom: 1rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--amesoft-dark);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--amesoft-gray);
+            line-height: 1.6;
+        }
+
+        /* Technologies Section */
+        .tech-category {
+            margin-bottom: 3rem;
+        }
+
+        .tech-category-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--amesoft-red);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tech-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(194, 11, 25, 0.15);
+        }
+
+        .tech-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--amesoft-dark);
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 180px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--amesoft-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-type {
+            color: var(--amesoft-red);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-description {
+            color: var(--amesoft-gray);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--amesoft-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: var(--amesoft-red);
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--amesoft-dark) 0%, #34495e 100%);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--amesoft-red-light);
+            margin-bottom: 1rem;
+        }
+
+        .contact-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--amesoft-red);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--amesoft-gray);
+            font-weight: 600;
+        }
+
+        /* Process Section */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--amesoft-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-description {
+            color: var(--amesoft-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--amesoft-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.4rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            .brochure-container {
+                max-width: none;
+                box-shadow: none;
+            }
+            
+            .service-card:hover,
+            .portfolio-item:hover,
+            .team-member:hover {
+                transform: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="brochure-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <img src="assets/img/logo1.png" alt="Logo Amesoft" />
+                <br/><br/>
+                <!-- <p class="tagline">Make it Real</p> -->
+                <p class="subtitle">Transformamos ideas en software excepcional con tecnologías de vanguardia</p>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="section">
+            <h2 class="section-title">¿Quiénes Somos?</h2>
+            <p class="section-subtitle">Somos un equipo apasionado de desarrolladores especializados en crear soluciones de software innovadoras</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <div class="stat-label">Soporte Técnico</div>
+                </div>
+                <!-- <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <div class="stat-label">Proyectos Entregados</div>
+                </div> -->
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem; color: var(--amesoft-gray);">
+                Combinamos expertise técnico con un enfoque centrado en el usuario para entregar productos que 
+                realmente impactan en el crecimiento de tu negocio. Nuestro compromiso es simple: convertir tu visión en 
+                realidad digital con la más alta calidad y en los tiempos acordados.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section" style="background: #f8f9fa;">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Soluciones tecnológicas completas para hacer realidad tus proyectos</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Aplicaciones Móviles</h3>
+                    <p class="service-description">
+                        Desarrollamos aplicaciones nativas y multiplataforma para iOS y Android usando Flutter. 
+                        Experiencias fluidas, rápidas y escalables que tus usuarios amarán.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">Desarrollo Web</h3>
+                    <p class="service-description">
+                        Sitios web modernos, aplicaciones web progresivas y plataformas empresariales. 
+                        Responsive, SEO optimizado y con las últimas tecnologías.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="service-title">APIs y Backend</h3>
+                    <p class="service-description">
+                        Arquitecturas robustas, APIs RESTful, microservicios y soluciones en la nube. 
+                        Escalabilidad y seguridad garantizada para tu negocio.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="service-title">Sistemas Empresariales</h3>
+                    <p class="service-description">
+                        Soluciones de gestión empresarial, ERP, CRM y sistemas de información 
+                        personalizados para optimizar tus procesos de negocio.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="service-title">MVP & Prototipos</h3>
+                    <p class="service-description">
+                        Validamos tu idea en el mercado de forma eficiente y económica con 
+                        prototipos funcionales y productos mínimos viables.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title">Mantenimiento & Soporte</h3>
+                    <p class="service-description">
+                        Actualizaciones, optimizaciones, corrección de bugs y soporte técnico continuo. 
+                        Mantenemos tu software siempre funcionando.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section class="section">
+            <h2 class="section-title">Tecnologías que Dominamos</h2>
+            <p class="section-subtitle">Stack tecnológico moderno y escalable organizado por especialidades</p>
+            
+            <div class="tech-category">
+                <h3 class="tech-category-title">Frontend & Desarrollo Móvil</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #dd0031;">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <div class="tech-name">Angular</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #61DAFB;">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-name">React</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #02569B;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="tech-name">Flutter & Dart</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #3DDC84;">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <div class="tech-name">Android</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3 class="tech-category-title">Backend & APIs</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #007ACC;">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="tech-name">.NET & C#</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #ED8B00;">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="tech-name">Java & Spring</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #8CC84B;">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-name">Node.js</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #336791;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="tech-name">PostgreSQL</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3 class="tech-category-title">Cloud & DevOps</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #FF9900;">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="tech-name">AWS</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #0078D4;">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="tech-name">Azure</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #2496ED;">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="tech-name">Docker</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon" style="color: #F05032;">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="tech-name">Git</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="section" style="background: #f8f9fa;">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <p class="section-subtitle">Casos de éxito que reflejan nuestra experiencia y calidad</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-chart-line" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Kerbrum</h3>
+                        <p class="portfolio-type">Aplicación Web Empresarial</p>
+                        <p class="portfolio-description">
+                            Aplicación web del sector salud que permite al gerente o administrador organizar 
+                            fácilmente toda la información de los pacientes a través de cualquier dispositivo 
+                            con conexión a internet.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-solar-panel" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Oprosol</h3>
+                        <p class="portfolio-type">Página Web Corporativa</p>
+                        <p class="portfolio-description">
+                            Sitio web corporativo desarrollado para Obras y Proyectos Solares S.A.S, 
+                            empresa especializada en soluciones de energía renovable con diseño responsivo 
+                            y optimización SEO.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-mobile-alt" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Asat Healthcare</h3>
+                        <p class="portfolio-type">Aplicación Móvil</p>
+                        <p class="portfolio-description">
+                            Aplicación móvil para el sector salud con funcionalidades avanzadas de gestión 
+                            médica, desarrollada con tecnologías nativas para Android con interfaz intuitiva.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-building" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">2E Ingeniería</h3>
+                        <p class="portfolio-type">Página Web Corporativa</p>
+                        <p class="portfolio-description">
+                            Sitio web profesional para empresa de ingeniería con portafolio de proyectos 
+                            y formularios de contacto, desarrollado con tecnologías web modernas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-chart-bar" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Livin Tugeda</h3>
+                        <p class="portfolio-type">Aplicación Web</p>
+                        <p class="portfolio-description">
+                            Sistema integral de gestión de encuestas, reportes dinámicos y visualización 
+                            de datos con importación masiva de información desarrollado con Drupal y PHP.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-user-md" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Pediatras en Casa</h3>
+                        <p class="portfolio-type">Sistema de Gestión Médica</p>
+                        <p class="portfolio-description">
+                            Sistema completo de gestión médica con portales diferenciados para administradores, 
+                            médicos y pacientes, optimizando la atención pediátrica personalizada.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-futbol" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Cultural Deportivo Leonesa</h3>
+                        <p class="portfolio-type">Aplicación Móvil Deportiva</p>
+                        <p class="portfolio-description">
+                            Aplicación móvil oficial del Cultural Deportivo Leonesa que conecta a los aficionados con el club. 
+                            Incluye noticias en tiempo real, estadísticas de jugadores y partidos, transmisiones en vivo, 
+                            tienda oficial del equipo y red social para aficionados.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-shield" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Cronos</h3>
+                        <p class="portfolio-type">Aplicación Móvil de Seguridad</p>
+                        <p class="portfolio-description">
+                            Aplicación móvil integral para la gestión de actividades de vigilancia en conjuntos residenciales. 
+                            Sistema completo que conecta celadores con empresas de seguridad mediante rondas programadas, 
+                            alertas inteligentes, reportes de incidentes y comunicación en tiempo real.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section">
+            <h2 class="section-title">Nuestro Proceso</h2>
+            <p class="section-subtitle">Metodología probada para garantizar el éxito de tu proyecto</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4 class="step-title">Descubrimiento</h4>
+                    <p class="step-description">Entendemos tu negocio y objetivos</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4 class="step-title">Planificación</h4>
+                    <p class="step-description">Definimos arquitectura y cronograma</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4 class="step-title">Desarrollo</h4>
+                    <p class="step-description">Construimos con metodologías ágiles</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4 class="step-title">Testing</h4>
+                    <p class="step-description">Pruebas exhaustivas de calidad</p>
+                </div>
+                <div class="process-step">
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4 class="step-title">Entrega</h4>
+                    <p class="step-description">Despliegue y soporte continuo</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h4 class="step-title">Evolución</h4>
+                    <p class="step-description">Mejoras y nuevas funcionalidades</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section" style="background: #f8f9fa;">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <p class="section-subtitle">Profesionales apasionados por la tecnología</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4 class="member-name">Luis Negrete</h4>
+                    <p class="member-role">CEO & Software Engineer</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4 class="member-name">Diana Morón</h4>
+                    <p class="member-role">CTO & Software Engineer</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4 class="member-name">David Negrete</h4>
+                    <p class="member-role">CFO & Mobile Developer</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 class="member-name">Ayaz Adiyaman</h4>
+                    <p class="member-role">Senior Software Engineer</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 class="member-name">Iván Zurita</h4>
+                    <p class="member-role">Senior Fullstack Developer</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 class="member-name">Angel Marrugo</h4>
+                    <p class="member-role">Senior Mobile Developer</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h4 class="member-name">Leo Peñaranda</h4>
+                    <p class="member-role">Community Manager</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h4 class="member-name">David Lara</h4>
+                    <p class="member-role">Creative & Graphic Designer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section">
+            <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+            <p class="section-subtitle">Nuestros valores y compromisos que nos distinguen en el mercado</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="service-title">Calidad Garantizada</h3>
+                    <p class="service-description">
+                        Procesos de desarrollo rigurosos y testing exhaustivo para asegurar 
+                        la máxima calidad en cada entrega.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="service-title">Entrega Puntual</h3>
+                    <p class="service-description">
+                        Metodologías ágiles para cumplir con todos los plazos establecidos 
+                        sin comprometer la calidad del proyecto.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-title">Equipo Experimentado</h3>
+                    <p class="service-description">
+                        Más de 9 años de experiencia en el desarrollo de software con 
+                        profesionales altamente capacitados.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="service-title">Soporte 24/7</h3>
+                    <p class="service-description">
+                        Acompañamiento continuo y soporte técnico disponible las 24 horas 
+                        para resolver cualquier incidencia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section">
+            <h2 class="section-title" style="color: white;">¿Listo para Comenzar?</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">
+                Conversemos sobre tu proyecto y cómo podemos ayudarte a alcanzar tus objetivos
+            </p>
+            
+            <div class="process-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="contact-title">Teléfono</h4>
+                    <p class="contact-info">+57 301 370 2045</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4 class="contact-title">Email</h4>
+                    <p class="contact-info">contacto@amesoft.co</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4 class="contact-title">Sitio Web</h4>
+                    <p class="contact-info">www.amesoft.co</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.2rem; margin-bottom: 1rem; color: white;">
+                    <strong>¡Transformemos tu idea en realidad digital!</strong>
+                </p>
+                <p style="color: rgba(255,255,255,0.8);">
+                    Solicita una consulta gratuita y descubre cómo podemos impulsar tu negocio con tecnología de vanguardia.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Amesoft S.A.S. - Todos los derechos reservados</p>
+            <div class="footer-links">
+                <a href="https://www.facebook.com/AmesoftCo" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://twitter.com/amesoftco" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://www.linkedin.com/company/amesoft-s-a-s/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+            <p style="margin-top: 1rem; font-style: italic; opacity: 0.8;">
+                "Make it Real" - Convirtiendo ideas en soluciones digitales desde 2015
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
