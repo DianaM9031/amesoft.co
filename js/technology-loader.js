@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadTechnologySection() {
     try {
-        const response = await fetch('sections/technology-section.html');
+        const response = await fetch('https://amesoftco.github.io/web/sections/technology-section.html');
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);

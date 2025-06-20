@@ -49,7 +49,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job1.png" alt="Kerbrum - Aplicación Web" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job1.png" alt="Kerbrum - Aplicación Web" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Kerbrum</div>
@@ -95,7 +95,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job2.png" alt="Oprosol - Página Web" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job2.png" alt="Oprosol - Página Web" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Oprosol</div>
@@ -144,7 +144,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job3.png" alt="Edén - Aplicación Web" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job3.png" alt="Edén - Aplicación Web" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Edén</div>
@@ -190,7 +190,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job4.png" alt="Cultural Deportivo Leonesa - App Móvil" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job4.png" alt="Cultural Deportivo Leonesa - App Móvil" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Cultural Deportivo Leonesa</div>
@@ -236,7 +236,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job5.png" alt="Asat Salud - App Móvil" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job5.png" alt="Asat Salud - App Móvil" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Asat Salud</div>
@@ -282,7 +282,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job6.png" alt="2E Ingeniería - Página Web" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job6.png" alt="2E Ingeniería - Página Web" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">2E Ingeniería</div>
@@ -328,7 +328,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job7.png" alt="Pediatras en Casa - Aplicación Web" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job7.png" alt="Pediatras en Casa - Aplicación Web" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Pediatras en Casa</div>
@@ -374,7 +374,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job8.png" alt="Livin Tugeda - Aplicación Web" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job8.png" alt="Livin Tugeda - Aplicación Web" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Livin Tugeda</div>
@@ -420,7 +420,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job9.png" alt="Lamce - Página Web" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job9.png" alt="Lamce - Página Web" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Lamce</div>
@@ -466,7 +466,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job10.png" alt="Cronos - App Móvil" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job10.png" alt="Cronos - App Móvil" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Cronos</div>
@@ -512,7 +512,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job11.png" alt="Srendip - App Móvil" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job11.png" alt="Srendip - App Móvil" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Srendip</div>
@@ -558,7 +558,7 @@ class PortfolioInline {
                                         </div>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/job12.png" alt="Fundación Albeiro Vargas - Página Web" />
+                                <img class="img-fluid" src="https://amesoftco.github.io/web/assets/img/portfolio/job12.png" alt="Fundación Albeiro Vargas - Página Web" />
                             </div>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Fundación Albeiro Vargas</div>

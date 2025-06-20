@@ -50,7 +50,7 @@ class PortfolioLoader {
 
     // Cargar el HTML de la sección del portafolio
     async fetchPortfolioHTML() {
-        const response = await fetch('sections/portfolio-section.html');
+        const response = await fetch('https://amesoftco.github.io/web/sections/portfolio-section.html');
         
         if (!response.ok) {
             throw new Error(`Error HTTP: ${response.status} - Verificar que el archivo sections/portfolio-section.html exista`);
@@ -71,7 +71,7 @@ class PortfolioLoader {
 
             const link = document.createElement('link');
             link.rel = 'stylesheet';
-            link.href = 'css/portfolio-styles.css';
+            link.href = 'https://amesoftco.github.io/web/css/portfolio-styles.css';
             
             link.onload = () => resolve();
             link.onerror = () => reject(new Error('Error cargando portfolio-styles.css'));
@@ -91,7 +91,7 @@ class PortfolioLoader {
             }
 
             const script = document.createElement('script');
-            script.src = 'js/portfolio-script.js';
+            script.src = 'https://amesoftco.github.io/web/js/portfolio-script.js';
             
             script.onload = () => resolve();
             script.onerror = () => reject(new Error('Error cargando portfolio-script.js'));

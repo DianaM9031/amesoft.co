@@ -10,7 +10,7 @@ const projectData = {
     kerbrum: {
         title: "Kerbrum",
         subtitle: "Plataforma de Gestión Empresarial",
-        image: "assets/img/portfolio/job1.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job1.png",
         description: "Kerbrum es una solución integral de gestión empresarial que revoluciona la forma en que las empresas manejan sus procesos administrativos. La plataforma incluye módulos de contabilidad, recursos humanos, inventario, CRM y reportes analíticos en tiempo real.",
         challenge: "El cliente necesitaba una solución que unificara múltiples sistemas heredados en una sola plataforma, reduciendo costos operativos y mejorando la eficiencia del equipo.",
         solution: "Desarrollamos una arquitectura modular usando Angular para el frontend y .NET Core para el backend, con SQL Server como base de datos principal. Implementamos microservicios para garantizar escalabilidad y mantenibilidad.",
@@ -41,7 +41,7 @@ const projectData = {
     oprosol: {
         title: "Oprosol",
         subtitle: "Sitio Web Corporativo",
-        image: "assets/img/portfolio/job2.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job2.png",
         description: "Sitio web corporativo moderno y responsivo desarrollado para Oprosol, empresa líder en soluciones industriales. El sitio incluye catálogo de productos, sistema de contacto y área de noticias corporativas.",
         challenge: "Crear una presencia web profesional que transmitiera confianza y expertise técnico, con enfoque en la generación de leads cualificados.",
         solution: "Desarrollamos un sitio web responsive con HTML5, CSS3 y JavaScript vanilla, optimizado para velocidad y SEO, con un diseño limpio y profesional.",
@@ -70,7 +70,7 @@ const projectData = {
     eden: {
         title: "Edén",
         subtitle: "Aplicación Web Interactiva",
-        image: "assets/img/portfolio/job3.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job3.png",
         description: "Edén es una aplicación web innovadora que combina tecnologías modernas para ofrecer una experiencia de usuario excepcional. La plataforma gestiona contenido dinámico y facilita la interacción entre usuarios.",
         challenge: "Desarrollar una aplicación web escalable que manejara grandes volúmenes de datos y proporcionara una experiencia de usuario fluida en tiempo real.",
         solution: "Implementamos una arquitectura MERN (MongoDB, Express, React, Node.js) con componentes reutilizables y estado global manejado con Redux.",
@@ -100,7 +100,7 @@ const projectData = {
     cultural: {
         title: "Cultural Deportivo Leonesa",
         subtitle: "Aplicación Móvil Oficial del Club",
-        image: "assets/img/portfolio/job4.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job4.png",
         description: "Aplicación móvil oficial del Cultural Deportivo Leonesa que conecta a los aficionados con el club. Incluye noticias, estadísticas, transmisiones en vivo y tienda oficial del equipo.",
         challenge: "Crear una app que mantuviera a los fanáticos comprometidos durante toda la temporada, con contenido actualizado en tiempo real y funcionalidades sociales.",
         solution: "Desarrollamos una aplicación nativa con Flutter que se sincroniza con APIs deportivas en tiempo real y Firebase para notificaciones push y autenticación.",
@@ -131,7 +131,7 @@ const projectData = {
     asat: {
         title: "Asat Salud",
         subtitle: "Aplicación de Salud Digital",
-        image: "assets/img/portfolio/job5.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job5.png",
         description: "Asat Salud es una aplicación móvil integral para el manejo de salud personal. Permite a los usuarios llevar un registro médico digital, recordatorios de medicamentos y citas médicas virtuales.",
         challenge: "Desarrollar una app de salud que cumpliera con regulaciones HIPAA, fuera intuitiva para usuarios de todas las edades y manejara datos sensibles de manera segura.",
         solution: "Implementamos Flutter con cifrado end-to-end, integración con HealthKit/Google Fit, y un backend seguro en Firebase con autenticación biométrica.",
@@ -162,7 +162,7 @@ const projectData = {
     "2e": {
         title: "2E Ingeniería",
         subtitle: "Sitio Web de Ingeniería",
-        image: "assets/img/portfolio/job6.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job6.png",
         description: "Sitio web profesional para 2E Ingeniería, empresa especializada en proyectos de infraestructura. Incluye portafolio de proyectos, servicios y sistema de contacto para clientes corporativos.",
         challenge: "Crear un sitio web que proyectara seriedad y expertise técnico, con un portafolio visual impactante de proyectos de ingeniería.",
         solution: "Desarrollamos un sitio con WordPress personalizado, galería de proyectos optimizada y formularios de contacto para diferentes tipos de servicios.",
@@ -191,7 +191,7 @@ const projectData = {
     pediatras: {
         title: "Pediatras",
         subtitle: "Plataforma de Gestión Empresarial",
-        image: "assets/img/portfolio/job7.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job7.png",
         description: "Kerbrum es una solución integral de gestión empresarial que revoluciona la forma en que las empresas manejan sus procesos administrativos. La plataforma incluye módulos de contabilidad, recursos humanos, inventario, CRM y reportes analíticos en tiempo real.",
         challenge: "El cliente necesitaba una solución que unificara múltiples sistemas heredados en una sola plataforma, reduciendo costos operativos y mejorando la eficiencia del equipo.",
         solution: "Desarrollamos una arquitectura modular usando Angular para el frontend y .NET Core para el backend, con SQL Server como base de datos principal. Implementamos microservicios para garantizar escalabilidad y mantenibilidad.",
@@ -222,7 +222,7 @@ const projectData = {
     livintugeda: {
         title: "Livin Tugeda",
         subtitle: "Plataforma de Gestión Empresarial",
-        image: "assets/img/portfolio/job8.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job8.png",
         description: "Kerbrum es una solución integral de gestión empresarial que revoluciona la forma en que las empresas manejan sus procesos administrativos. La plataforma incluye módulos de contabilidad, recursos humanos, inventario, CRM y reportes analíticos en tiempo real.",
         challenge: "El cliente necesitaba una solución que unificara múltiples sistemas heredados en una sola plataforma, reduciendo costos operativos y mejorando la eficiencia del equipo.",
         solution: "Desarrollamos una arquitectura modular usando Angular para el frontend y .NET Core para el backend, con SQL Server como base de datos principal. Implementamos microservicios para garantizar escalabilidad y mantenibilidad.",
@@ -253,7 +253,7 @@ const projectData = {
     lamce: {
         title: "Lamce",
         subtitle: "Sitio Web Corporativo",
-        image: "assets/img/portfolio/job9.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job9.png",
         description: "Sitio web corporativo moderno y responsivo desarrollado para Oprosol, empresa líder en soluciones industriales. El sitio incluye catálogo de productos, sistema de contacto y área de noticias corporativas.",
         challenge: "Crear una presencia web profesional que transmitiera confianza y expertise técnico, con enfoque en la generación de leads cualificados.",
         solution: "Desarrollamos un sitio web responsive con HTML5, CSS3 y JavaScript vanilla, optimizado para velocidad y SEO, con un diseño limpio y profesional.",
@@ -282,7 +282,7 @@ const projectData = {
     cronos: {
         title: "Cronos",
         subtitle: "Aplicación de Gestión de Tiempo",
-        image: "assets/img/portfolio/job10.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job10.png",
         description: "Cronos es una aplicación móvil diseñada para optimizar la gestión del tiempo y aumentar la productividad personal y empresarial. Incluye seguimiento de tareas, análisis de productividad y reportes detallados.",
         challenge: "Crear una app de productividad que fuera simple de usar pero poderosa en funcionalidades, con capacidad de trabajo offline y sincronización en la nube.",
         solution: "Desarrollamos con Flutter una app que combina SQLite para almacenamiento local con Firebase para sincronización, usando algoritmos de análisis de productividad.",
@@ -312,7 +312,7 @@ const projectData = {
     srendip: {
         title: "Srendip",
         subtitle: "Aplicación de Descubrimiento",
-        image: "assets/img/portfolio/job11.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job11.png",
         description: "Srendip es una aplicación móvil innovadora que ayuda a los usuarios a descubrir lugares únicos y experiencias auténticas en su ciudad. Combina geolocalización, recomendaciones personalizadas y comunidad.",
         challenge: "Desarrollar una app que ofreciera recomendaciones precisas basadas en ubicación, preferencias del usuario y comportamiento de la comunidad.",
         solution: "Implementamos algoritmos de machine learning para recomendaciones, integración profunda con Google Maps y un sistema de gamificación para fomentar la participación.",
@@ -343,7 +343,7 @@ const projectData = {
     fundacion: {
         title: "Fundación Albeiro Vargas y Ángeles Custodios",
         subtitle: "Sitio Web para Fundación",
-        image: "assets/img/portfolio/job12.png",
+        image: "https://amesoftco.github.io/web/assets/img/portfolio/job12.png",
         description: "Sitio web institucional para la Fundación Albeiro Vargas y Ángeles Custodios, enfocado en transparencia, comunicación efectiva con donantes y promoción de actividades sociales.",
         challenge: "Crear un sitio web que transmitiera confianza y transparencia, facilitara las donaciones online y mantuviera informada a la comunidad sobre las actividades de la fundación.",
         solution: "Desarrollamos un sitio WordPress con diseño emotivo, sistema de donaciones seguro, galería de actividades y blog de noticias con enfoque en storytelling.",
