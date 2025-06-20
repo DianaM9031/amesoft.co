@@ -10324,7 +10324,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/bck.png");
+  background-image: url("https://amesoftco.github.io/web/assets/img/bck.png");
   background-repeat: repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10629,7 +10629,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #9c9d9f;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("https://amesoftco.github.io/web/assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
